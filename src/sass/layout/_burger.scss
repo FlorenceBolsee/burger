@@ -92,7 +92,7 @@
 
 .burger.anim1 {
 
-  transform: rotate(90deg);
+  animation: anim1-burger .3s forwards cubic-bezier(.66,0,.88,.76);
 
     .burger__top {
       background: #928886;
@@ -112,12 +112,23 @@
 }
 
 .burger.animBack {
+  animation: anim1-burger-back .3s forwards cubic-bezier(.66,0,.88,.76);
   .span__bottom {
     animation: anim1-spanbot-back .6s forwards;
   }
   .span__top {
     animation: anim1-spantop-back .6s forwards;
   }
+}
+
+@keyframes anim1-burger {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(90deg)}
+}
+
+@keyframes anim1-burger-back {
+  0% {transform: rotate(90deg)}
+  100% {transform: rotate(0deg)}
 }
 
 @keyframes anim1-spanbot {
@@ -152,7 +163,7 @@
 
 .burger.anim2 {
 
-  transform: rotate(90deg);
+  animation: anim1-burger .3s forwards cubic-bezier(.66,0,.88,.76);
 
     .burger__top {
       background: #928886;
